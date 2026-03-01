@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-glass: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #fff;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drift-lr {
+  0% {
+    transform: translate(-30vw, 5px);
+  }
+
+  25% {
+    transform: translate(25vw, -10px);
+  }
+
+  50% {
+    transform: translate(65vw, 15px);
+  }
+
+  75% {
+    transform: translate(95vw, -5px);
+  }
+
+  100% {
+    transform: translate(130vw, 10px);
+  }
+}
+
+@keyframes drift-rl {
+  0% {
+    transform: translate(130vw, -5px);
+  }
+
+  25% {
+    transform: translate(95vw, 15px);
+  }
+
+  50% {
+    transform: translate(65vw, -10px);
+  }
+
+  75% {
+    transform: translate(25vw, 10px);
+  }
+
+  100% {
+    transform: translate(-30vw, -5px);
+  }
+}
+
+.glass-panel {
+  background: rgba(8, 12, 28, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
