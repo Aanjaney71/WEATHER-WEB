@@ -62,7 +62,7 @@ export const WeatherProvider = ({ children }) => {
         try {
             console.log(`Fetching weather for: ${city}`);
             // Use the production backend URL
-            const response = await axios.get(`https://weather-back-git-main-aanjaney71s-projects.vercel.app/api/v1/weather/${encodeURIComponent(city)}?fresh=true`);
+            const response = await axios.get(`https://weather-back-mauve.vercel.app/api/v1/weather/${encodeURIComponent(city)}?fresh=true`);
             console.log("Weather API Response:", response.data.current.weather[0], "Timezone:", response.data.current.timezone);
             setWeatherData(response.data);
             setCurrentCity(city);
